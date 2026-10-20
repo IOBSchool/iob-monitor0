@@ -240,6 +240,36 @@
     .hero .sub{font-size:20px;}
     .hero .cap{font-size:14px;}
   }
+
+  /* ===== 申込フォーム（LP内） ===== */
+  .apform{margin-top:18px;}
+  .apform .field{margin-bottom:18px;}
+  .apform label{display:block;font-weight:700;font-size:15px;margin-bottom:6px;}
+  .apform label .req{color:var(--o);font-size:12px;margin-left:6px;}
+  .apform .help{font-size:12.5px;color:var(--sub);margin:0 0 6px;line-height:1.7;}
+  .apform input[type=text],.apform input[type=email],.apform textarea{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:10px;font-size:16px;font-family:inherit;background:#fff;color:var(--ink);}
+  .apform input:focus,.apform textarea:focus{outline:none;border-color:var(--o);}
+  .apform textarea{min-height:84px;resize:vertical;}
+  .apform .check{display:flex;gap:10px;align-items:flex-start;background:var(--white);border:1px solid var(--line);border-radius:10px;padding:14px;font-size:14px;line-height:1.7;}
+  .apform .check input{margin-top:5px;flex:none;width:18px;height:18px;accent-color:var(--o);}
+  .apform .check label{font-weight:400;margin:0;font-size:14px;}
+  .paylead{font-family:"Zen Old Mincho",serif;font-weight:700;font-size:17px;line-height:1.7;margin:20px 0 10px;}
+  .paylead small{font-family:"Noto Sans JP",sans-serif;font-weight:400;font-size:13px;color:var(--sub);}
+  .payopts{display:grid;gap:10px;}
+  .paybtn{display:block;width:100%;text-align:center;background:var(--o);color:#fff;border:none;border-radius:12px;padding:14px 12px;cursor:pointer;font-family:inherit;line-height:1.5;}
+  .paybtn b{display:block;font-family:"Zen Old Mincho",serif;font-size:17px;letter-spacing:.02em;}
+  .paybtn span{display:block;font-size:13px;opacity:.95;margin-top:2px;}
+  .paybtn:disabled{opacity:.55;cursor:not-allowed;}
+  .formerr{background:#fff3ee;border:1px solid var(--o);color:var(--ink);border-radius:10px;padding:12px 14px;font-size:14.5px;margin-top:12px;}
+  @media(min-width:900px){
+    .apform label{font-size:19px;} .apform .help{font-size:16px;} .apform input[type=text],.apform input[type=email],.apform textarea{font-size:19px;}
+    .apform .check,.apform .check label{font-size:17px;} .paylead{font-size:22px;} .paylead small{font-size:16px;}
+    .payopts{grid-template-columns:1fr 1fr;} .paybtn b{font-size:19px;} .paybtn span{font-size:15px;}
+  }
+
+  /* ===== 改行を入れない（本文は画面幅で自然に折り返す）。縦書きの見出しだけ改行を残す ===== */
+  section br, .closing br, .sub br, .glance br, .tl br, .faq br, .box br, .info br, .attn br{display:none;}
+  .hero h1 br, .hero .cap br{display:inline;}
 </style>
 </head>
 <body>
@@ -517,8 +547,8 @@
       <tr><th>実践グループ</th><td>4人1組のLINEグループで、90日間、仲間と小さなチャレンジを続けます（情報交換程度でも大丈夫です）。グループの進め方の詳細は、開始前にご案内します。</td></tr>
       <tr><th>定員と開催</th><td>最大8名。11月9日（月）の時点で、お支払い済みの方が4名以上なら開きます。4名に届かなかった場合は、今回は開かず、お支払いいただいた参加費を全額お返しします。</td></tr>
       <tr><th>受付</th><td>最終日は<b>11月9日（月）</b>。8名のお支払いが完了した時点で、それより前でも受付を終了します。</td></tr>
-      <tr><th>お席</th><td>フォームを送っただけでは、お席は決まりません。<b>お支払いが完了した順</b>に決まります。受付の終了とお支払いが行き違い、8名を超えてお支払いがあった場合は、その方へ全額お返しします。</td></tr>
-      <tr><th>お支払い</th><td>フォーム送信後の画面に出る決済ページからお支払いください。お住まいの地域と同じ決済ページをお選びください。</td></tr>
+      <tr><th>お席</th><td>お申し込みだけでは、お席は決まりません。<b>お支払いが完了した順</b>に決まります。受付の終了とお支払いが行き違い、8名を超えてお支払いがあった場合は、その方へ全額お返しします。</td></tr>
+      <tr><th>お支払い</th><td>お申し込みフォームのボタンを押すと、お申し込みを送信して、そのまま決済のページへ移動します。お住まいの地域と同じ金額のボタンをお選びください。メールで決済のリンクはお送りしません。</td></tr>
       <tr><th>お返しするとき</th><td>4名に届かず開けない場合、こちらの都合で開けなくなった場合は、お支払いいただいた参加費を全額お返しします。お返しは、お支払いと同じ方法で行います。</td></tr>
       <tr><th>お支払い後の取り消し</th><td>お支払い完了後は、ご本人の都合による取り消し・返金はお受けしません。</td></tr>
       <tr><th>欠席・アーカイブ</th><td>できるだけライブでのご参加をおすすめしています。実際の疑問をその場で確認したり、ほかの参加者の気づきを聞いたりできるためです。ご都合が合わない回は、各回のアーカイブ動画を、パスワード付きの専用ページで後日ご覧いただけます。視聴期限は、3回とも2027年3月23日までです。ライブの別日開催・振り替えはありません。</td></tr>
@@ -534,7 +564,7 @@
   <div class="wrap">
     <p class="kicker">質問</p>
     <h2>よくあるご質問</h2>
-    <div class="faq"><div class="q"><i>Q</i>試す一品が、まだ決まっていなくても大丈夫ですか？</div><div class="a">大丈夫です。フォームの欄は任意です。毎回の集まりの中で、一緒に考えていきます。</div></div>
+    <div class="faq"><div class="q"><i>Q</i>試す一品が、まだ決まっていなくても大丈夫ですか？</div><div class="a">大丈夫です。毎回の集まりの中で、一緒に考えていきます。</div></div>
     <div class="faq"><div class="q"><i>Q</i>オーガニックに詳しくなくても参加できますか？</div><div class="a">知識の量は問いません。選ぶために必要な見方や判断材料は、集まりの中でお伝えします。</div></div>
     <div class="faq"><div class="q"><i>Q</i>都合が合わない回があったら？</div><div class="a">各回のアーカイブ動画を、パスワード付きの専用ページで、2027年3月23日まで見られます。欠席した回も、あとから見られます。できるだけライブでのご参加をおすすめします。</div></div>
     <div class="faq"><div class="q"><i>Q</i>4人1組のLINEグループとは、どんなものですか？</div><div class="a">部活動のように、仲間と一緒に、90日間、小さなチャレンジを続けるグループです。情報交換程度でも大丈夫です。グループの進め方の詳細は、開始前にご案内します。</div></div>
@@ -545,24 +575,66 @@
   </div>
 </section>
 
-<!-- ============ S13 K 申込の流れ ============ -->
-<section class="alt" id="apply">
+<!-- ============ S13 K 申込（LP内フォーム→そのまま決済ページへ） ============ -->
+<section id="apply">
   <div class="wrap">
     <p class="kicker">申込</p>
-    <h2>お申し込みの流れ</h2>
+    <h2>お申し込み</h2>
     <p class="big" style="margin-bottom:16px;">選ぶための見方を知って、一品でやってみたい。そう感じた方は、こちらからお申し込みください。</p>
     <ol class="flow">
-      <li><span class="no">1</span><div>フォームに入力します<small>1分ほど。項目は5つです</small></div></li>
-      <li><span class="no">2</span><div>送信後の画面で、お住まいの地域に合う決済ページからお支払いします</div></li>
-      <li><span class="no">3</span><div>お支払いが完了した時点で、お席が決まります<small>11月10日（火）に、開催のご連絡をお送りします</small></div></li>
+      <li><span class="no">1</span><div>お名前・ご住所・メールアドレスを入力します</div></li>
+      <li><span class="no">2</span><div>条件に同意して、お住まいの地域とお支払い方法のボタンを押します</div></li>
+      <li><span class="no">3</span><div>そのまま決済のページへ移動します<small>お支払いが完了した時点で、お席が決まります（11月10日（火）に、開催のご連絡をお送りします）</small></div></li>
     </ol>
-    <div class="attn">フォームを送っただけでは、お席は決まりません。<br>受付の最終日は11月9日（月）です。8名のお支払いが完了した時点で、受付を終了します。</div>
-    <a class="cta" id="mainCta" href="https://docs.google.com/forms/d/e/1FAIpQLSfo-NgNtORrVMPHpn4599bEgiqNzVmL9axk4ITq3OeK8NqQSw/viewform" target="_blank" rel="noopener">90日モニター 第0期に申し込む</a>
+    <div class="attn">お申し込みだけでは、お席は決まりません。お席は、お支払いが完了した順に決まります。<br>受付の最終日は11月9日（月）です。8名のお支払いが完了した時点で、受付を終了します。</div>
+
+    <form id="applyForm" class="apform" novalidate>
+      <div class="field">
+        <label for="f-name">お名前<span class="req">必須</span></label>
+        <input type="text" id="f-name" name="name" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="f-address">ご住所<span class="req">必須</span></label>
+        <p class="help">国・郵便番号・都道府県・市区町村・番地までお書きください。</p>
+        <textarea id="f-address" name="address" autocomplete="street-address" rows="3" required></textarea>
+      </div>
+      <div class="field">
+        <label for="f-email">メールアドレス<span class="req">必須</span></label>
+        <p class="help">日程や大切なご連絡を、このアドレスへお送りします。</p>
+        <input type="email" id="f-email" name="email" autocomplete="email" required>
+      </div>
+      <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;" aria-hidden="true">
+      <div class="field">
+        <div class="check">
+          <input type="checkbox" id="agree" required>
+          <label for="agree">このページの「参加費と、お申し込みの条件」、<a href="https://iobschool.github.io/iob-exam-prep-2026/terms.html" target="_blank" rel="noopener">受講規約</a>、<a href="https://iobschool.github.io/iob-exam-prep-2026/privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>を確認し、内容に同意して申し込みます。（必須）</label>
+        </div>
+      </div>
+      <p class="paylead">お住まいの地域とお支払い方法を選んでください。<br><small>ボタンを押すと、お申し込みを送信して、そのまま決済のページへ移動します。</small></p>
+      <div class="payopts">
+        <button type="submit" class="paybtn" data-key="JP" data-method="PayPal" data-region="日本在住"><b>日本在住｜PayPalで支払う</b><span>€45（消費税10％込み）</span></button>
+        <button type="submit" class="paybtn" data-key="JP" data-method="Stripe" data-region="日本在住"><b>日本在住｜Stripe（カード）で支払う</b><span>€45（消費税10％込み）</span></button>
+        <button type="submit" class="paybtn" data-key="EU" data-method="PayPal" data-region="欧州（EU）在住"><b>欧州（EU）在住｜PayPalで支払う</b><span>€49（付加価値税19％込み）</span></button>
+        <button type="submit" class="paybtn" data-key="EU" data-method="Stripe" data-region="欧州（EU）在住"><b>欧州（EU）在住｜Stripe（カード）で支払う</b><span>€49（付加価値税19％込み）</span></button>
+      </div>
+      <p class="formerr" id="formErr" role="alert" style="display:none;"></p>
+    </form>
+
+    <div id="payRedirect" style="display:none;text-align:center;padding:20px 6px;">
+      <p class="mincho" style="font-size:20px;color:var(--o);line-height:1.7;">お申し込みを受け付けました。<br>お支払いのページへ移動します。</p>
+      <p>自動で移動しない場合は、下のボタンを押してください。</p>
+      <a id="payLink" class="cta" href="#" style="max-width:360px;margin:16px auto 0;">お支払いのページへ進む</a>
+    </div>
+    <div id="fallback" style="display:none;text-align:center;padding:20px 6px;">
+      <p class="mincho" style="font-size:19px;color:var(--o);line-height:1.7;">恐れ入ります。<br>あと一手間だけお願いします。</p>
+      <p>ただいま自動の送信が使えない状態です。下のボタンを押すと、入力した内容が入ったメールが開きます。そのまま送信していただければ、お申し込みを受け付けます。</p>
+      <a id="fallbackMail" class="cta" href="#" style="max-width:360px;margin:16px auto 0;">メールでお申し込みを送る</a>
+    </div>
     <p class="terms" style="text-align:center;">お問い合わせ：<a href="mailto:school@iob.bio">school@iob.bio</a></p>
   </div>
 </section>
 
-<div id="stickyCta"><a id="mainCta3" href="https://docs.google.com/forms/d/e/1FAIpQLSfo-NgNtORrVMPHpn4599bEgiqNzVmL9axk4ITq3OeK8NqQSw/viewform" target="_blank" rel="noopener">90日モニター 第0期に申し込む</a></div>
+<div id="stickyCta"><a id="mainCta3" href="#apply">90日モニター 第0期に申し込む</a></div>
 
 <footer>
   <img src="iob-logo-orange.png" alt="Institut für Organic Business">
@@ -573,9 +645,70 @@
 </footer>
 
 <script>
-  // 申込フォーム（Googleフォーム）。ページ上部のボタンは申込の流れ（#apply）へ、最後のボタンがフォームへ。
-  var FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfo-NgNtORrVMPHpn4599bEgiqNzVmL9axk4ITq3OeK8NqQSw/viewform";
-  // 追従ボタン（スマホのみ）：ファーストビューを過ぎたら出す／申込の流れに来たら引っ込める
+  // 申込受付＝LP内フォーム → 受付GAS（回答シート「LP申込」に記録・申込者へ自動返信（リンクなし）・hi@iob.bio へ通知）→ そのまま決済ページへ移動
+  var GAS_URL = "https://script.google.com/macros/s/AKfycby0CUEnGh7kpXB9soFowLgoWYeIMEyjTMlsl3qBG4GSLIJIVv7jHzhvR4ZL67IOdVfL_w/exec";
+  // 決済ページ（Stripeは作成後に、ここへURLを入れると「Stripe」ボタンが表示される。空のあいだは非表示）
+  var PAY_LINKS = {
+    JP: { PayPal: "https://www.paypal.com/ncp/payment/V2NR6XY7BUF76", Stripe: "" },
+    EU: { PayPal: "https://www.paypal.com/ncp/payment/UZLZRG63UKG2L", Stripe: "" }
+  };
+  var SRC = (function(){
+    var s = (new URLSearchParams(location.search).get("src") || "").toLowerCase().replace(/[^a-z0-9_-]/g, "").slice(0, 20);
+    try { if (s) sessionStorage.setItem("iobm0_src", s); else s = sessionStorage.getItem("iobm0_src") || ""; } catch (e) {}
+    return s || "direct";
+  })();
+
+  var form = document.getElementById("applyForm");
+  var btns = [].slice.call(form.querySelectorAll(".paybtn"));
+  // 決済URLが入っている組み合わせだけボタンを出す
+  btns.forEach(function(b){ if (!(PAY_LINKS[b.getAttribute("data-key")] || {})[b.getAttribute("data-method")]) b.style.display = "none"; });
+  var errBox = document.getElementById("formErr");
+  function showErr(msg){ errBox.textContent = msg; errBox.style.display = "block"; errBox.scrollIntoView({behavior:"smooth", block:"center"}); }
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    errBox.style.display = "none";
+    var sub = e.submitter || document.activeElement;
+    var region = sub && sub.getAttribute ? sub.getAttribute("data-region") : "";
+    var method = sub && sub.getAttribute ? sub.getAttribute("data-method") : "";
+    var key = sub && sub.getAttribute ? sub.getAttribute("data-key") : "";
+    var name = form.name.value.trim(), email = form.email.value.trim(), address = form.address.value.trim();
+    if (!name || !address || !email) { showErr("お名前・ご住所・メールアドレスを入力してください。"); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showErr("メールアドレスの形を確かめてください。"); return; }
+    if (!document.getElementById("agree").checked) { showErr("条件への同意にチェックを入れてください。"); return; }
+    if (form.website.value) return; // 自動送信よけ
+    var link = (PAY_LINKS[key] || {})[method];
+    if (!region || !method || !link) { showErr("お支払い方法のボタンを押してください。"); return; }
+    btns.forEach(function(b){ b.disabled = true; });
+
+    var data = { name: name, email: email, address: address, region: region, method: method, agree: true, src: SRC, website: "" };
+
+    function goPay(){
+      form.style.display = "none";
+      var pr = document.getElementById("payRedirect");
+      document.getElementById("payLink").href = link;
+      pr.style.display = "block";
+      pr.scrollIntoView({behavior:"smooth", block:"center"});
+      setTimeout(function(){ window.location.href = link; }, 900);
+    }
+    function fallback(){
+      var body = "90日モニター 第0期に申し込みます。\n\nお名前：" + name + "\nご住所：" + address + "\nメールアドレス：" + email + "\nお住まいの地域：" + region + "\nお支払い方法：" + method + "\n条件に同意します。\n";
+      document.getElementById("fallbackMail").href = "mailto:school@iob.bio?subject=" + encodeURIComponent("90日モニター 第0期 お申し込み（" + name + "）") + "&body=" + encodeURIComponent(body);
+      form.style.display = "none";
+      var fb = document.getElementById("fallback");
+      fb.style.display = "block";
+      fb.scrollIntoView({behavior:"smooth", block:"center"});
+    }
+    if (!GAS_URL || GAS_URL.indexOf("http") !== 0) { fallback(); return; }
+
+    // 保存の応答を待つ（最大3秒）。keepalive付きなので、ページを離れても送信は続く。送れなかったときは「送れたフリ」をせずメール申込に切り替える。
+    var body = new URLSearchParams({ payload: JSON.stringify(data) });
+    var timer = new Promise(function(res){ setTimeout(function(){ res("timeout"); }, 3000); });
+    var send = fetch(GAS_URL, { method: "POST", mode: "no-cors", keepalive: true, headers: { "Content-Type": "application/x-www-form-urlencoded;charset=utf-8" }, body: body }).then(function(){ return "ok"; });
+    Promise.race([send, timer]).then(function(){ goPay(); }).catch(function(){ fallback(); });
+  });
+
+  // 追従ボタン（スマホ）：ファーストビューを過ぎたら出す／申込に来たら引っ込める
   (function(){
     var bar = document.getElementById("stickyCta"), sec = document.getElementById("apply");
     document.body.classList.add("has-sticky");
