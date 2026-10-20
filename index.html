@@ -649,8 +649,8 @@
   var GAS_URL = "https://script.google.com/macros/s/AKfycby0CUEnGh7kpXB9soFowLgoWYeIMEyjTMlsl3qBG4GSLIJIVv7jHzhvR4ZL67IOdVfL_w/exec";
   // 決済ページ（Stripeは作成後に、ここへURLを入れると「Stripe」ボタンが表示される。空のあいだは非表示）
   var PAY_LINKS = {
-    JP: { PayPal: "https://www.paypal.com/ncp/payment/V2NR6XY7BUF76", Stripe: "" },
-    EU: { PayPal: "https://www.paypal.com/ncp/payment/UZLZRG63UKG2L", Stripe: "" }
+    JP: { PayPal: "https://www.paypal.com/ncp/payment/V2NR6XY7BUF76", Stripe: "https://buy.stripe.com/6oU14oceT0sc39L6UH1kA1g" },
+    EU: { PayPal: "https://www.paypal.com/ncp/payment/UZLZRG63UKG2L", Stripe: "https://buy.stripe.com/dRm4gAdiXgra8u5gvh1kA1h" }
   };
   var SRC = (function(){
     var s = (new URLSearchParams(location.search).get("src") || "").toLowerCase().replace(/[^a-z0-9_-]/g, "").slice(0, 20);
