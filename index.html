@@ -285,7 +285,7 @@
     <p class="cap">講師　<b>レムケなつこ</b><br>ドイツ在住 オーガニック教育の専門家</p>
     <p class="sub"><span class="nw">「知っているのに、できない」が、</span><span class="nw">仲間とできるに変わる90日。</span></p>
     <div class="when"><b><span class="nw">2026年11月19日（木）</span><span class="nw">〜2027年2月23日（火）</span></b><br>約90日・オンライン<br><b class="o">定員8名中6名が埋まっています（残り2席）</b></div>
-    <a class="cta" href="#apply">90日モニター 第0期に申し込む</a>
+    <a class="cta" href="#apply" data-cta="fv">90日モニター 第0期に申し込む</a>
   </div>
 </header>
 
@@ -303,7 +303,7 @@
       <li><span class="k">人数</span><span class="v">定員8名中6名が埋まっています（残り2席）<small>開催は決まっています</small></span></li>
       <li><span class="k">受付</span><span class="v">11月1日（日）まで</span></li>
     </ul>
-    <a class="cta" href="#apply" style="max-width:420px;">お申し込みはこちら</a>
+    <a class="cta" href="#apply" data-cta="mid" style="max-width:420px;">お申し込みはこちら</a>
   </div>
 </section>
 
@@ -633,7 +633,7 @@
   </div>
 </section>
 
-<div id="stickyCta"><a id="mainCta3" href="#apply">90日モニター 第0期に申し込む</a></div>
+<div id="stickyCta"><a id="mainCta3" href="#apply" data-cta="sticky">90日モニター 第0期に申し込む</a></div>
 
 <footer>
   <img src="iob-logo-orange.png" alt="Institut für Organic Business">
@@ -658,6 +658,29 @@
   })();
 
   var form = document.getElementById("applyForm");
+
+  // インサイト計測（常時）：開いた／どのボタンを押したか／フォーム入力開始／スクロール。個人が分かる情報は送らない（訪問者IDはランダム文字）。記録先＝受付GASの「LP計測」タブ
+  var VID = (function(){ try { var v = localStorage.getItem("iobm0_vid"); if (!v) { v = Math.random().toString(36).slice(2, 10); localStorage.setItem("iobm0_vid", v); } return v; } catch (e) { return ""; } })();
+  var LAST_CTA = (function(){ try { return sessionStorage.getItem("iobm0_cta") || ""; } catch (e) { return ""; } })();
+  function track(ev){
+    try {
+      var ref = ""; try { ref = document.referrer ? new URL(document.referrer).hostname : ""; } catch (e) {}
+      var d = { ev: ev, src: SRC, vid: VID, cta: LAST_CTA, dev: (window.innerWidth < 768 ? "sp" : "pc"), ref: ref };
+      fetch(GAS_URL, { method: "POST", mode: "no-cors", keepalive: true, headers: { "Content-Type": "application/x-www-form-urlencoded;charset=utf-8" }, body: new URLSearchParams({ payload: JSON.stringify(d) }) });
+    } catch (e) {}
+  }
+  track("view");
+  [].slice.call(document.querySelectorAll("[data-cta]")).forEach(function(a){
+    a.addEventListener("click", function(){ LAST_CTA = a.getAttribute("data-cta"); try { sessionStorage.setItem("iobm0_cta", LAST_CTA); } catch (e) {} track("cta"); });
+  });
+  var formStarted = false;
+  form.addEventListener("focusin", function(){ if (!formStarted) { formStarted = true; track("form_start"); } });
+  var sc50 = false, sc90 = false;
+  window.addEventListener("scroll", function(){
+    var r = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
+    if (!sc50 && r >= 0.5) { sc50 = true; track("scroll50"); }
+    if (!sc90 && r >= 0.9) { sc90 = true; track("scroll90"); }
+  }, { passive: true });
   var btns = [].slice.call(form.querySelectorAll(".paybtn"));
   // 決済URLが入っている組み合わせだけボタンを出す
   btns.forEach(function(b){ if (!(PAY_LINKS[b.getAttribute("data-key")] || {})[b.getAttribute("data-method")]) b.style.display = "none"; });
@@ -680,7 +703,7 @@
     if (!region || !method || !link) { showErr("お支払い方法のボタンを押してください。"); return; }
     btns.forEach(function(b){ b.disabled = true; });
 
-    var data = { name: name, email: email, address: address, region: region, method: method, agree: true, src: SRC, website: "" };
+    var data = { name: name, email: email, address: address, region: region, method: method, agree: true, src: SRC, cta: LAST_CTA, website: "" };
 
     function goPay(){
       form.style.display = "none";
