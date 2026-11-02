@@ -759,7 +759,7 @@
 
   // 席数の自動表示と、締め切り後のウェイティングリスト（2026-11-02）
   // 席数＝受付GAS（入金通知の件数＋手動分）。満席か 11/6 23:59 JST を過ぎたら、申込フォームの代わりに待ちリストを出す
-  var STATUS_URL = "";
+  var STATUS_URL = "https://script.google.com/macros/s/AKfycbxTJryX2aw4UhJ0k3QFN6S8dvgLyZINRJrNNWUnduxpRXyrqE9lE66B82HMxrwmKqOs/exec";
   var DEADLINE_MS = Date.parse("2026-11-06T23:59:59+09:00");
   var PREVIEW = new URLSearchParams(location.search).get("preview") || "";
   var isClosed = false;
