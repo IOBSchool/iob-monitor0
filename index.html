@@ -270,6 +270,12 @@
   /* ===== 改行を入れない（本文は画面幅で自然に折り返す）。縦書きの見出しだけ改行を残す ===== */
   section br, .closing br, .sub br, .glance br, .tl br, .faq br, .box br, .info br, .attn br{display:none;}
   .hero h1 br, .hero .cap br{display:inline;}
+  .wlbox{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:18px 16px;margin-top:6px;}
+  .wlbox p{margin:0 0 12px;line-height:1.95;}
+  #wlWrap.wl-off{opacity:.4;pointer-events:none;}
+  #wlWrap .ff-6ae841691dd31d96f29b6bf1__title,#wlWrap .ff-6ae841691dd31d96f29b6bf1__subtitle{display:none !important;}
+  #wlWrap [data-ff-el="root"]{background:transparent !important;}
+  #wlWrap .ff-6ae841691dd31d96f29b6bf1__success{font-size:16px;line-height:1.9;color:var(--ink);}
 </style>
 </head>
 <body>
@@ -284,7 +290,7 @@
     </div>
     <p class="cap">講師　<b>レムケなつこ</b><br>ドイツ在住 オーガニック教育の専門家</p>
     <p class="sub"><span class="nw">「知っているのに、できない」が、</span><span class="nw">仲間とできるに変わる90日。</span></p>
-    <div class="when"><b><span class="nw">2026年11月19日（木）</span><span class="nw">〜2027年2月23日（火）</span></b><br>約90日・オンライン<br><b class="o">定員8名中6名が埋まっています（残り2席）</b></div>
+    <div class="when"><b><span class="nw">2026年11月19日（木）</span><span class="nw">〜2027年2月23日（火）</span></b><br>約90日・オンライン<br><b class="o"><span class="js-seat">定員8名中6名が埋まっています（残り2席）</span></b></div>
     <a class="cta" href="#apply" data-cta="fv">90日モニター 第0期に申し込む</a>
   </div>
 </header>
@@ -300,7 +306,7 @@
       <li><span class="k">期間</span><span class="v">2026年11月19日（木）〜2027年2月23日（火）の約90日<small>うち1月25日〜2月23日は、毎週のメールで進める実践の30日</small></span></li>
       <li><span class="k">始まる前に</span><span class="v">3回、オンラインで集まります<small>11月19日・12月9日・1月22日／各45分／欠席しても、2027年3月23日までアーカイブで見られます</small></span></li>
       <li><span class="k">参加費</span><span class="v">日本在住 €45／EU在住 €49<small>どちらも税込</small></span></li>
-      <li><span class="k">人数</span><span class="v">定員8名中6名が埋まっています（残り2席）<small>開催は決まっています</small></span></li>
+      <li><span class="k">人数</span><span class="v"><span class="js-seat">定員8名中6名が埋まっています（残り2席）</span><small>開催は決まっています</small></span></li>
       <li><span class="k">受付</span><span class="v">11月6日（金）まで</span></li>
     </ul>
     <a class="cta" href="#apply" data-cta="mid" style="max-width:420px;">お申し込みはこちら</a>
@@ -434,7 +440,7 @@
     <p class="kicker">日程</p>
     <h2>日程を、1本の線で</h2>
     <ul class="tl">
-      <li class="key"><div class="d">11月6日（金）</div><div class="w">受付の最終日<small>定員8名中6名が埋まっています（残り2席）</small></div></li>
+      <li class="key"><div class="d">11月6日（金）</div><div class="w">受付の最終日<small><span class="js-seat">定員8名中6名が埋まっています（残り2席）</span></small></div></li>
       <li><div class="d">11月10日（火）</div><div class="w">お支払い済みの方へ、ご案内をお送りします</div></li>
       <li class="key"><div class="d">11月19日（木）</div><div class="w">第1回「そもそも、本物のオーガニックって何？」<small>日本21:00〜21:45／ドイツ13:00〜13:45</small></div></li>
       <li class="key"><div class="d">12月9日（水）</div><div class="w">第2回「売り場で、何を見ればいい？」<small>日本21:00〜21:45／ドイツ13:00〜13:45</small></div></li>
@@ -545,7 +551,7 @@
       <tr><th>参加費</th><td><b>日本在住 €45</b>／<b>EU在住 €49</b>（どちらも税込）<small>お住まいの地域で税が異なるため、金額を分けています。</small></td></tr>
       <tr><th>約90日の間にあること</th><td>各回のあとの短いフォローメール（3通）／1月25日からの毎週月曜のメール（計5通）／15日目（2月8日）・30日目（2月23日）の3分ほどの振り返り。1月25日からの30日間の途中で、新しく集まる日はありません。</td></tr>
       <tr><th>実践グループ</th><td>LINEグループで、90日間、仲間と小さなチャレンジを続けます（情報交換程度でも大丈夫です）。グループの進め方の詳細は、開始前にご案内します。</td></tr>
-      <tr><th>定員と開催</th><td>定員8名中6名が埋まっています（残り2席）。開催は決まっています。</td></tr>
+      <tr><th>定員と開催</th><td><span class="js-seat">定員8名中6名が埋まっています（残り2席）</span>。開催は決まっています。</td></tr>
       <tr><th>受付</th><td>最終日は<b>11月6日（金）</b>。8名のお支払いが完了した時点で、それより前でも受付を終了します。</td></tr>
       <tr><th>お席</th><td>お申し込みだけでは、お席は決まりません。<b>お支払いが完了した順</b>に決まります。受付の終了とお支払いが行き違い、8名を超えてお支払いがあった場合は、その方へ全額お返しします。</td></tr>
       <tr><th>お支払い</th><td>お申し込みフォームのボタンを押すと、お申し込みを送信して、そのまま決済のページへ移動します。お住まいの地域と同じ金額のボタンをお選びください。メールで決済のリンクはお送りしません。</td></tr>
@@ -577,6 +583,7 @@
 <!-- ============ S13 K 申込（LP内フォーム→そのまま決済ページへ） ============ -->
 <section id="apply">
   <div class="wrap">
+    <div id="openBox">
     <p class="kicker">申込</p>
     <h2>お申し込み</h2>
     <p class="big" style="margin-bottom:16px;">選ぶための見方を知って、小さな挑戦をしてみたい。そう感じた方は、こちらからお申し込みください。</p>
@@ -585,7 +592,7 @@
       <li><span class="no">2</span><div>条件に同意して、お住まいの地域とお支払い方法のボタンを押します</div></li>
       <li><span class="no">3</span><div>そのまま決済のページへ移動します<small>お支払いが完了した時点で、お席が決まります（11月10日（火）に、ご案内をお送りします）</small></div></li>
     </ol>
-    <div class="attn">お申し込みだけでは、お席は決まりません。お席は、お支払いが完了した順に決まります。<br>受付の最終日は11月6日（金）です。定員8名中6名が埋まっています（残り2席）。8名のお支払いが完了した時点で、受付を終了します。</div>
+    <div class="attn">お申し込みだけでは、お席は決まりません。お席は、お支払いが完了した順に決まります。<br>受付の最終日は11月6日（金）です。<span class="js-seat">定員8名中6名が埋まっています（残り2席）</span>。8名のお支払いが完了した時点で、受付を終了します。</div>
 
     <form id="applyForm" class="apform" novalidate>
       <div class="field">
@@ -628,6 +635,26 @@
       <p class="mincho" style="font-size:19px;color:var(--o);line-height:1.7;">恐れ入ります。<br>あと一手間だけお願いします。</p>
       <p>ただいま自動の送信が使えない状態です。下のボタンを押すと、入力した内容が入ったメールが開きます。そのまま送信していただければ、お申し込みを受け付けます。</p>
       <a id="fallbackMail" class="cta" href="#" style="max-width:360px;margin:16px auto 0;">メールでお申し込みを送る</a>
+    </div>
+    </div>
+    <div id="closedBox" style="display:none;">
+    <p class="kicker">申込</p>
+    <h2>第0期のお申し込みは締め切りました</h2>
+    <div class="wlbox">
+      <p>今回の受付は終了しました。</p>
+      <p>これから、毎日の選び方を少しずつ知り、小さく試しながら、家族との暮らしになじませていきたい方へ。<br>現在、暮らしに取り入れやすい新しいライフスタイルコースを準備しています。</p>
+      <p style="margin-bottom:0;">ご案内できる内容が整いましたら、ウェイティングリストにご登録いただいた方へ最初にお知らせします。</p>
+    </div>
+    <div class="field" style="margin-top:18px;">
+      <div class="apform"><div class="check">
+        <input type="checkbox" id="w-agree">
+        <label for="w-agree">新しいライフスタイルコースのご案内と、レムケなつこの一般メルマガ（暮らしのオーガニックに関するメール）が届くことに同意します。（必須）</label>
+      </div></div>
+    </div>
+    <div id="wlWrap" class="wl-off">
+      <div id="fd-form-6ae841691dd31d96f29b6bf1"></div>
+    </div>
+    <p id="wlHint" class="terms" style="text-align:center;margin-top:6px;">上の同意にチェックを入れると、ご登録いただけます。</p>
     </div>
     <p class="terms" style="text-align:center;">お問い合わせ：<a href="mailto:school@iob.bio">school@iob.bio</a></p>
   </div>
@@ -729,6 +756,54 @@
     var send = fetch(GAS_URL, { method: "POST", mode: "no-cors", keepalive: true, headers: { "Content-Type": "application/x-www-form-urlencoded;charset=utf-8" }, body: body }).then(function(){ return "ok"; });
     Promise.race([send, timer]).then(function(){ goPay(); }).catch(function(){ fallback(); });
   });
+
+  // 席数の自動表示と、締め切り後のウェイティングリスト（2026-11-02）
+  // 席数＝受付GAS（入金通知の件数＋手動分）。満席か 11/6 23:59 JST を過ぎたら、申込フォームの代わりに待ちリストを出す
+  var STATUS_URL = "";
+  var DEADLINE_MS = Date.parse("2026-11-06T23:59:59+09:00");
+  var PREVIEW = new URLSearchParams(location.search).get("preview") || "";
+  var isClosed = false;
+  function applyStatus(st){
+    var closed = (st && st.closed) || Date.now() > DEADLINE_MS || PREVIEW === "closed";
+    if (PREVIEW === "open") closed = false;
+    var seats = st && typeof st.seats === "number" ? st.seats : null;
+    [].slice.call(document.querySelectorAll(".js-seat")).forEach(function(el){
+      if (closed) el.textContent = "第0期のお申し込みは締め切りました";
+      else if (seats !== null) el.textContent = "定員8名中" + seats + "名が埋まっています（残り" + Math.max(8 - seats, 0) + "席）";
+    });
+    if (closed && !isClosed) {
+      isClosed = true;
+      document.getElementById("openBox").style.display = "none";
+      document.getElementById("closedBox").style.display = "block";
+      [].slice.call(document.querySelectorAll('a[href="#apply"]')).forEach(function(a){ a.textContent = "ウェイティングリストに登録する"; });
+      loadWaitlistForm();
+      track("waitlist_view");
+    }
+  }
+  (function(){
+    if (Date.now() > DEADLINE_MS || PREVIEW) { applyStatus(null); }
+    if (!STATUS_URL || STATUS_URL.indexOf("http") !== 0) return;
+    var cb = "iobm0Seats" + Math.random().toString(36).slice(2, 8);
+    window[cb] = function(st){ try { if (!st.error) applyStatus(st); } catch (e) {} };
+    var sc = document.createElement("script");
+    sc.src = STATUS_URL + "?callback=" + cb;
+    document.body.appendChild(sc);
+  })();
+
+  // 待ちリストの登録欄＝Flodesk公式フォーム（通常メルマガ＋90日モニター0期_ウェイティングに入る）。締め切り表示になったときだけ読み込む
+  var wlLoaded = false;
+  function loadWaitlistForm(){
+    if (wlLoaded) return; wlLoaded = true;
+    (function(w, d, t, h, s, n) { w.FlodeskObject = n; var fn = function() { (w[n].q = w[n].q || []).push(arguments); }; w[n] = w[n] || fn; var f = d.getElementsByTagName(t)[0]; var v = '?v=' + Math.floor(new Date().getTime() / (120 * 1000)) * 60; var sm = d.createElement(t); sm.async = true; sm.type = 'module'; sm.src = h + s + '.mjs' + v; f.parentNode.insertBefore(sm, f); var sn = d.createElement(t); sn.async = true; sn.noModule = true; sn.src = h + s + '.js' + v; f.parentNode.insertBefore(sn, f); })(window, document, 'script', 'https://assets.flodesk.com', '/universal', 'fd');
+    window.fd('form', { formId: '6ae841691dd31d96f29b6bf1', containerEl: '#fd-form-6ae841691dd31d96f29b6bf1' });
+    var wrap = document.getElementById("wlWrap"), agree = document.getElementById("w-agree"), hint = document.getElementById("wlHint");
+    agree.addEventListener("change", function(){ wrap.classList.toggle("wl-off", !agree.checked); hint.style.display = agree.checked ? "none" : "block"; if (agree.checked) track("waitlist_start"); });
+    var sent = false;
+    new MutationObserver(function(){
+      var ok = wrap.querySelector('[data-ff-el="success"]');
+      if (!sent && ok && getComputedStyle(ok).display !== "none") { sent = true; track("waitlist_submit"); }
+    }).observe(wrap, { subtree: true, attributes: true, childList: true });
+  }
 
   // 追従ボタン（スマホ）：ファーストビューを過ぎたら出す／申込に来たら引っ込める
   (function(){
